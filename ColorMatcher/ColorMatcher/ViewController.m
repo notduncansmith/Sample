@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Eric Stroh. All rights reserved.
 //
 #import "ViewController.h"
-#import "ColorMatcher-Swift.h" //Point 10 header that contains the entirety of our swift interface, click on this to view how the compiler converts the swift to a header file containing some Obj-C
+#import "ColorMatcher-Swift.h" //header that contains the entirety of our swift interface, click on this to view how the compiler converts the swift to a header file containing some Obj-C
 
-//this is different for a framework however.  In a framework, from your .h file you would use a forward declaration to the class.  ie @class ESTimer; then you can set a property to it.  In the .m implementation file you would import the using framework style <NameOfFrameWork/NameOfFrameWork-Swift.h>
+//this is different for a framework however.  In a framework, from your .h file you would use a forward declaration to the class.  ie @class ESTimer; then you can set a property to it.  In the .m implementation file you would import using framework style <NameOfFrameWork/NameOfFrameWork-Swift.h>
 
 
 
@@ -42,7 +42,7 @@
     [self resetMasterColorBackground];
     [self updateYourColorAndVerify:nil];
     timer = [[ESTimer alloc] init];
-    //timer = [ESTimer newInstance] ;
+    //timer = [ESTimer newInstance] ; if you were getting an instance of a pure Swift file
     [timer createTimer];
     timer.delegate = self;
     

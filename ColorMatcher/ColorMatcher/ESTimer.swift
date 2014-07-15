@@ -9,44 +9,47 @@
 import Foundation
 import UIKit
 
-/*Point 10 - Enumerations in Swift will not get imported back to Objective-C*/
+/*Enumerations in Swift will not get imported back to Objective-C*/
 enum CurrentTimerState: Int {
     case kCounting
     case kPaused
 }
 
-@objc protocol ESTimerDelegate{//Point 6 put the @objc so that it will be available to objc classes
+@objc protocol ESTimerDelegate{//put the @objc so that it will be available to objc classes
     func timeIsUp()
 }
 
-class ESTimer:NSObject,ControllerDelegate {//Point 6do not need to add @objc if the class extends a class in an existing framework such as UIKit  Point 7 protocols go in comma-seperated list
+class ESTimer:NSObject,ControllerDelegate {//do not need to add @objc if the class extends a class in an existing framework such as UIKit, protocols go in comma-seperated list
     
-    /*Point 3*/
     //All values including object references are guaranteed to have a non-nil value
-    var internalTimer:NSTimer! //all properties are strong by default
-    //the ? means the value is optional, we will initialize this later so leaving it as optional for now
+    //all properties are strong by default
+    
+    var internalTimer:NSTimer!
+    //the ! means the value is an implicity unwrapped optional, we will initialize this later 
+    
     let timeout = 60
     var currentTime = 0
     var myCounterView:AnyObject!// the CountdownView isn't in scope yet so we use the Swift version of id as AnyObject and instatiate with the correct class later
-    weak var delegate:ESTimerDelegate?  //optional because we might not have a delegate
+    weak var delegate:ESTimerDelegate?  //optional value because we might not have a delegate
     var timerState:CurrentTimerState = .kCounting
     
     init(){
-/*Point1  */      myCounterView = CountdownView(frame: CGRectMake(0,0,20,20))//command click on frame will take you to the Swift version of the UIView initializer
+     myCounterView = CountdownView(frame: CGRectMake(0,0,20,20))//command click on frame will take you to the Swift version of the UIView initializer
     }
     
 
-    // Need to add a class level initializer if you don't extend NSObject
-    class func newInstance() -> ESTimer {
+    // Need to add a class level initializer if you don't extend an Objective C class
+    /*class func newInstance() -> ESTimer {
         return ESTimer()/*Point1 this calls init() for ESTimer */
-    }
+    }*/
 
     
     func createTimer(){
-        /*point 4* Closures*/
+        //Notice closure/block syntax
         dispatch_async(dispatch_get_main_queue(), {
-            /*Point2 class method*/
-           self.internalTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, /*Point 5*/selector: "timerFunction", userInfo: nil, repeats: true);
+           self.internalTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerFunction", userInfo: nil, repeats: true);
+            //Notice the selector syntax above
+            //bool is represented with true/false
         })
     }
     
@@ -57,7 +60,7 @@ class ESTimer:NSObject,ControllerDelegate {//Point 6do not need to add @objc if 
                 self.delegate?.timeIsUp()   //if the delegate is a non-nil value that responds to the selector then it makes the call to timeIsUp
             }
         }
-        /*Point 3 checking and unwrapping an implicitly unwrapped optional*/
+        /*checking and unwrapping an implicitly unwrapped optional*/
         if let counterView = myCounterView as? CountdownView{
             counterView.timeLabel.text = "\(timeout-currentTime)"
         }
