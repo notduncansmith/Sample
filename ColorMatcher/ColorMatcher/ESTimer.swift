@@ -29,7 +29,8 @@ class ESTimer:NSObject,ControllerDelegate {//do not need to add @objc if the cla
     
     let timeout = 60
     var currentTime = 0
-    var myCounterView:AnyObject!// the CountdownView isn't in scope yet so we use the Swift version of id as AnyObject and instatiate with the correct class later
+    var myCounterView:AnyObject!
+    // the CountdownView isn't in scope yet so we use the Swift version of id as AnyObject and instatiate with the correct class later (NOTE:This was  bug is first beta version.  You can use an optional CountdownView here and will not need the cast shown later.  However, for demonstration purposes, I will leave it as AnyObject so that you can see how to cast
     weak var delegate:ESTimerDelegate?  //optional value because we might not have a delegate
     var timerState:CurrentTimerState = .kCounting
     
