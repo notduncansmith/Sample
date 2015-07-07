@@ -10,29 +10,29 @@
 	<string>ColorMatcher</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D7FB60FC-4763-470E-99B4-E0626B2D7E9D</key>
+		<key>A0FA8C0A90D12C38343F5024D04E0A95B966C372</key>
 		<string>https://github.com/strohtennis/Sample.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ColorMatcher/ColorMatcher.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D7FB60FC-4763-470E-99B4-E0626B2D7E9D</key>
+		<key>A0FA8C0A90D12C38343F5024D04E0A95B966C372</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/strohtennis/Sample.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D7FB60FC-4763-470E-99B4-E0626B2D7E9D</string>
+	<string>A0FA8C0A90D12C38343F5024D04E0A95B966C372</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D7FB60FC-4763-470E-99B4-E0626B2D7E9D</string>
+			<string>A0FA8C0A90D12C38343F5024D04E0A95B966C372</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Sample</string>
 		</dict>
