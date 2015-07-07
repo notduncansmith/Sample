@@ -35,7 +35,7 @@ class ESTimer:NSObject,ControllerDelegate {//do not need to add @objc if the cla
     var timerState:CurrentTimerState = .kCounting
     
     override init(){
-     myCounterView = CountdownView(frame: CGRectMake(0,0,20,20))//command click on frame will take you to the Swift version of the UIView initializer
+     myCounterView = CountdownView(frame: CGRectMake(0,0,30,20))//command click on frame will take you to the Swift version of the UIView initializer
     }
     
 

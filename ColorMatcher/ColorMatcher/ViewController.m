@@ -123,6 +123,7 @@
        [self isClose:_blueSlider toValue:blueValue]){
         if(![_statusLabel.text isEqualToString:@"Time is up"]){
             _statusLabel.text = @"Good Job";
+            [timer pauseTimer];
         }
         
     }

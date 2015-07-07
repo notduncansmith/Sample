@@ -25,20 +25,6 @@
 			remoteGlobalIDString = 330C5E1D1971B7CC0015CCD3;
 			remoteInfo = ColorMatcher;
 		};
-		3339375019A60D54009F1FB7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3339374B19A60D54009F1FB7 /* SecondProject.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3339372519A60D53009F1FB7;
-			remoteInfo = SecondProject;
-		};
-		3339375219A60D54009F1FB7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3339374B19A60D54009F1FB7 /* SecondProject.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3339373B19A60D54009F1FB7;
-			remoteInfo = SecondProjectTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +44,6 @@
 		330C5E451971EE5C0015CCD3 /* ESTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTimer.swift; sourceTree = "<group>"; };
 		330C5E4B197209030015CCD3 /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
 		330C5E4C197209030015CCD3 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
-		3339374B19A60D54009F1FB7 /* SecondProject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecondProject.xcodeproj; path = SecondProject/SecondProject.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +67,6 @@
 		330C5E151971B7CC0015CCD3 = {
 			isa = PBXGroup;
 			children = (
-				3339374B19A60D54009F1FB7 /* SecondProject.xcodeproj */,
 				330C5E201971B7CC0015CCD3 /* ColorMatcher */,
 				330C5E371971B7CC0015CCD3 /* ColorMatcherTests */,
 				330C5E1F1971B7CC0015CCD3 /* Products */,
@@ -142,15 +126,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3339374C19A60D54009F1FB7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3339375119A60D54009F1FB7 /* SecondProject.app */,
-				3339375319A60D54009F1FB7 /* SecondProjectTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,6 +170,7 @@
 		330C5E161971B7CC0015CCD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Eric Stroh";
 				TargetAttributes = {
@@ -218,12 +194,6 @@
 			mainGroup = 330C5E151971B7CC0015CCD3;
 			productRefGroup = 330C5E1F1971B7CC0015CCD3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3339374C19A60D54009F1FB7 /* Products */;
-					ProjectRef = 3339374B19A60D54009F1FB7 /* SecondProject.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				330C5E1D1971B7CC0015CCD3 /* ColorMatcher */,
@@ -231,23 +201,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3339375119A60D54009F1FB7 /* SecondProject.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SecondProject.app;
-			remoteRef = 3339375019A60D54009F1FB7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3339375319A60D54009F1FB7 /* SecondProjectTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SecondProjectTests.xctest;
-			remoteRef = 3339375219A60D54009F1FB7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		330C5E1C1971B7CC0015CCD3 /* Resources */ = {
@@ -393,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ColorMatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ColorMatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
